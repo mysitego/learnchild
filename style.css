@@ -1,0 +1,543 @@
+*{
+    font-family: 'Tajawal', Arial, sans-serif;
+}
+body {
+    font-family: 'Tajawal', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #D42364; /* Set dominant pink color as background */
+    color: #333;
+}
+
+.top-banner {
+    background-color: #D42364;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* لجعل العناصر قابلة للالتفاف في الشاشات الصغيرة */
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.motivational-text {
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+nav {
+    background-color: #5E9A3A; /* Secondary color */
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #F4EC1F; /* لون التأثير عند التحريك */
+}
+
+
+.hero {
+    position: relative; /* لجعل المحتوى فوق الطبقة الشفافة */
+    background-image: url("/images/image.png");
+    background-size: cover;
+    background-position: center;
+    background-clip: inherit;
+    text-align: center;
+    padding: 60px 20px;
+    color: #4D4788;
+}
+
+.hero::before {
+    content: '';
+    position: absolute; /* تغطي الطبقة الشفافة الصورة بالكامل */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* لون الطبقة الشفافة، هنا لون داكن */
+    z-index: 1; /* لضمان أن الطبقة الشفافة تظهر تحت المحتوى */
+}
+
+.hero h1, .hero p, .cta-button {
+    position: relative; /* لضمان أن النص والأزرار تظهر فوق الطبقة الشفافة */
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 2.5em; /* حجم أصغر قليلاً للشاشات الصغيرة */
+    margin-bottom: 20px;
+   
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    
+}
+
+
+.cta-button {
+    background-color: #D42364; /* Button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.4em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #E4E48F;
+    transform: scale(1.05); /* Added scaling for a playful effect */
+}
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 10px;
+    background-color: #f5f5dd;
+}
+
+.about-us h2{
+    padding: 10px;
+    background-color: #D42364;
+    color: #E4E48F;
+    width: 1200px;
+    margin: 20px 0;
+    border-radius: 10px;
+    text-align: center;
+}
+.about-us-content {
+    background-color: #faf7a4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin-top: 15px;
+    padding: 15px;
+    flex-wrap: wrap; /* لدعم الشاشات الصغيرة */
+    gap: 20px; /* لتوزيع المسافات بين العناصر بشكل متساوٍ */
+}
+
+.about-us img {
+  
+    width: 300px;
+    height: auto;
+}
+
+.about-us-text {
+    flex: 10;
+    padding-left: 0;
+}
+.mission-vision {
+    background-color: #4D4788;
+    padding: 30px ;
+    margin: 20px 0;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+}
+
+
+.mission-vision h3 {
+    color: #F4EC1F; /* Button color */
+    margin-bottom: 20px;
+}
+
+.mission-vision p {
+    font-size: 1.2em;
+}
+
+.games-section {
+    padding: 2rem;
+    position: relative;
+    background-image: url("/images/image.png");
+    background-size: cover;
+    background-position: center;
+    background-clip: inherit;
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+}
+
+
+.games-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.games-container::before {
+    content: '';
+    position: absolute; /* تغطي الطبقة الشفافة الصورة بالكامل */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* لون الطبقة الشفافة، هنا لون داكن */
+    z-index: 0; /* لضمان أن الطبقة الشفافة تظهر تحت المحتوى */
+}
+.game-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+
+.game-icon {
+    width: 80px;
+    height: 80px;
+    background: #f8f9fa;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #2d3436;
+}
+
+.game-title {
+    font-size: 1.5rem;
+    color: #2d3436;
+    margin-bottom: 1rem;
+}
+
+.game-description {
+    color: #636e72;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.play-button {
+    background: linear-gradient(90deg, #D42364, #4D4788);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.play-button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+
+
+.reviews {
+    background-color: #5E9A3A; /* Secondary color */
+    padding: 60px;
+    text-align: center;
+    color: white;
+    
+}
+#reviews button{
+    margin: 10px;
+    background-color: #D42364;
+    color: white;
+}
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.review-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    position: relative;
+    color: #333;
+}
+
+.review-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    left: 20px;
+    border: 2px solid #5E9A3A; /* Secondary color */
+}
+/* خلفية القسم */
+#reviews {
+    background-color: #E4E48F; /* لون خلفية لطيف */
+    color: #333;
+    padding: 20px;
+    
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* خط طفولي */
+    
+}
+
+/* تصميم العنوان */
+#reviews h2, #user-reviews h2 {
+    font-size: 2em;
+    color: #FF6F61; /* لون طفولي نابض بالحياة */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* شبكة التعليقات */
+.review-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* تصميم كل تعليق */
+.review-item {
+    background-color: #FFFFFF;
+    color: #333;
+    border: 2px solid #FFB6C1; /* حواف وردية لطيفة */
+    padding: 15px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* صورة الملف الشخصي */
+.review-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid #FF6F61; /* إطار حول الصورة */
+}
+
+/* زر إضافة تعليق */
+#reviews button {
+    background-color: #FFD700; /* لون زر مبهج */
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1em;
+   
+    text-align: center;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #FFB6C1; /* تغيير لون الزر عند التمرير */
+}
+
+/* النموذج */
+#review-form {
+    display: none;
+    background-color: #E4E48F; /* خلفية زهرية لطيفة */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#review-form h3 {
+    color: #FF6F61;
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"], textarea, input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #FFB6C1;
+    margin-top: 5px;
+    font-family: inherit;
+}
+
+textarea {
+    resize: none;
+}
+
+#new-reviews {
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #4D4788; /* Secondary color */
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 1.1em;
+}
+
+footer ul li a:hover {
+    color: #F4EC1F;
+}
+
+footer p a{
+    color: white;
+}
+
+
+/* General Mobile Adjustments */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .top-banner {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        text-align: center;
+    }
+
+    .motivational-text {
+        font-size: 1.2em; /* Adjusted font size */
+        margin: 10px 0;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 10px; /* Reduce gap for smaller screens */
+    }
+
+    nav ul li a {
+        font-size: 0.9em; /* Reduce font size for nav links */
+    }
+
+    .hero {
+        padding: 30px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .hero h1 {
+        font-size: 1.8em; /* Smaller headline size */
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        padding: 8px 15px; /* Smaller button padding */
+        font-size: 1em;
+    }
+
+    .about-us h2 {
+        font-size: 1.5em; /* Smaller title size */
+        width: 100%; /* Full width for small screens */
+    }
+
+    .about-us-content {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center;
+    }
+
+    .about-us img {
+        width: 100%; /* Make image responsive */
+        max-width: 250px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .games-container {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    .games-container::before {
+        background-color: rgba(0, 0, 0, 0.5); /* Lighter overlay */
+    }
+
+    .game-card {
+        padding: 1rem; /* Adjust padding */
+    }
+
+    .review-grid {
+        flex-direction: column; /* Stack reviews vertically */
+        gap: 15px;
+    }
+
+    .review-item {
+        width: 100%; /* Full width for reviews */
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    #reviews button {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    footer ul {
+        flex-direction: column; /* Stack footer links */
+        gap: 15px;
+    }
+
+    footer ul li a {
+        font-size: 1em;
+    }
+
+    footer {
+        padding: 20px;
+    }
+}

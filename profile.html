@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Game</title>
+    <style>
+        body {
+            font-family: 'Tajawal', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f5f5f5; /* Background color */
+        }
+        iframe {
+            width: 90%; /* Adjust iframe width */
+            height: 80vh; /* Adjust iframe height */
+            border: none;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        button {
+            background-color: #D42364;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #E4E48F;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Game</h1>
+    <iframe src="https://play.makeit.app/play.html?code=842303" title="Game"></iframe>
+    <div class="button-container">
+        <button onclick="goHome()">Return to Home</button>
+    </div>
+
+    <script>
+        function goHome() {
+            window.location.href = 'index.html'; // Replace with the correct URL of your home page
+        }
+    </script>
+</body>
+</html>
